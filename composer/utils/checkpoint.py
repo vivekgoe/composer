@@ -1074,7 +1074,7 @@ def _save_checkpoint(
 
     is_deepspeed = is_model_deepspeed(state.model)
 
-    if weights_only and not is_deepspeed:
+    if 1: #weights_only and not is_deepspeed:
         state_dict = {
             'state': {
                 'model': state.get_model_state_dict(),
